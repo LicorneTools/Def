@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Njaka Marco Rajaonson | Portfolio Artistique</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#050505',
+                        cardBg: '#0f0f0f',
+                        accentRed: '#cc1111',
+                        brightRed: '#e50914',
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        artistic: ['Cormorant Garamond', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050505;
+            color: #e5e5e5;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        /* Ambient background glow */
+        .ambient-glow {
+            background: radial-gradient(circle at 50% 0%, rgba(204, 17, 17, 0.1) 0%, transparent 70%);
+        }
+
+        /* Media hover effects */
+        .media-card {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+        .media-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(204, 17, 17, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(204, 17, 17, 0.2);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f1f1f;
+            border-radius: 2px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #cc1111;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-200 antialiased selection:bg-accentRed selection:text-white">
+
+    <header class="fixed top-0 left-0 w-full z-40 bg-black/80 backdrop-blur-md border-b border-neutral-900">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="flex flex-col">
+                <span class="font-artistic text-lg tracking-wider text-white">
+                    NJAKA MARCO <span class="text-accentRed italic">RAJAONSON</span>
+                </span>
+                <span class="text-[10px] text-gray-500 font-light tracking-widest uppercase">Def aka Lil Baby Lim'z</span>
+            </a>
+
+            <nav class="hidden sm:flex items-center space-x-8 text-xs tracking-widest uppercase text-gray-400">
+                <a href="#comedie-musicale" class="hover:text-accentRed transition-colors">Comédie Musicale</a>
+                <a href="#krump" class="hover:text-accentRed transition-colors">Danse & Krump</a>
+                <a href="#realisation" class="hover:text-accentRed transition-colors">Réalisation</a>
+                <a href="#marketing" class="hover:text-accentRed transition-colors">Marketing</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="ambient-glow pt-32 pb-20">
+        
+        <section class="max-w-5xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+                
+                <!-- Profile Image Card (Clean display without overlaid text) -->
+                <div class="md:col-span-5 flex justify-center order-1">
+                    <div class="w-full max-w-sm cursor-pointer media-card overflow-hidden rounded-md bg-cardBg border border-neutral-800" onclick="openMediaModal('image', 'image0.png')">
+                        <img src="image0.png" 
+                             alt="Njaka Marco Rajaonson" 
+                             class="w-full aspect-[3/4] object-cover"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x800/0f0f0f/333333?text=Photo';">
+                    </div>
+                </div>
+
+                <!-- Text Info & Biography -->
+                <div class="md:col-span-7 order-2 flex flex-col justify-center">
+                    <h1 class="font-artistic text-4xl sm:text-5xl font-normal tracking-wide text-white mb-2 leading-tight">
+                        Njaka Marco Rajaonson
+                    </h1>
+                    
+                    <p class="text-gray-400 text-xs tracking-widest uppercase mb-4">
+                        Def aka Lil Baby Lim'z . Spécialisation : Character and Attitude
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs tracking-widest text-accentRed uppercase mb-8">
+                        <span>Danseur</span>
+                        <span class="text-neutral-700">•</span>
+                        <span>Acteur</span>
+                        <span class="text-neutral-700">•</span>
+                        <span>Réalisateur</span>
+                        <span class="text-neutral-700">•</span>
+                        <span>Responsable communication</span>
+                    </div>
+
+                    <!-- Personal Biography Statement -->
+                    <div class="border-l border-accentRed/60 pl-6 py-1 space-y-4">
+                        <p class="text-gray-300 text-base leading-relaxed font-light italic">
+                            Def Marco aka Lil Baby Lim'z. Je suis danseur krumper, acteur et réalisateur à la fois. Pourquoi ce mix de disciplines ?
+                        </p>
+                        <p class="text-gray-300 text-base leading-relaxed font-light italic">
+                            Dans la danse, je suis spécialisé dans l'incarnation de characters ; en acting, dans la reproduction des mimiques et de la voix d'un personnage. J'ai approfondi mes spécialisations grâce à l'écriture de personnages et au storytelling, que j'ai amenés dans la narration audiovisuelle et que j'utilise dans le marketing.
+                        </p>
+                        <p class="text-gray-300 text-base leading-relaxed font-light italic">
+                            Aujourd'hui, je suis responsable communication d'un événement de danse, le plus grand événement Krump de l'océan Indien, avec des participants venus de Madagascar, de La Réunion et des Comores, et des jurys venus des Comores et des USA. Acteur et danseur sous contrats ponctuels, je suis aussi danseur freestyler.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="comedie-musicale" class="max-w-5xl mx-auto px-6 pt-24">
+            <div class="border-t border-neutral-900 pt-16">
+                <h2 class="font-artistic text-2xl sm:text-3xl text-white mb-4">Comédie Musicale</h2>
+                <p class="text-gray-300 text-base leading-relaxed max-w-3xl mb-8 font-light">
+                    J'ai interprété Razoul dans la comédie musicale Aladdin, produite par Okalou.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Media Card 1: image1.png (Clean view) -->
+                    <div class="media-card cursor-pointer overflow-hidden rounded-md bg-cardBg border border-neutral-800" onclick="openMediaModal('image', 'image1.png')">
+                        <img src="image1.png" alt="" class="w-full aspect-[3/4] object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x800/0f0f0f/333333?text=Media';">
+                    </div>
+
+                    <!-- Media Card 2: video1.mp4 (Minimal play indicator) -->
+                    <div class="relative media-card cursor-pointer overflow-hidden rounded-md bg-cardBg border border-neutral-800 aspect-[3/4] flex items-center justify-center group" onclick="openMediaModal('video', 'https://res.cloudinary.com/tnxlmqqv/video/upload/v1789409521/5231e8d6-ba16-4349-94aa-9137f1c1a6bd_bxxekk.mp4')">
+                        <video src="https://res.cloudinary.com/tnxlmqqv/video/upload/v1789409521/5231e8d6-ba16-4349-94aa-9137f1c1a6bd_bxxekk.mp4" class="w-full h-full object-cover" muted loop playsinline></video>
+                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                            <div class="w-12 h-12 rounded-full bg-accentRed/90 text-white flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-play ml-1 text-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="krump" class="max-w-5xl mx-auto px-6 pt-24">
+            <div class="border-t border-neutral-900 pt-16">
+                <h2 class="font-artistic text-2xl sm:text-3xl text-white mb-4">Danse & Krump</h2>
+                <p class="text-gray-300 text-base leading-relaxed max-w-3xl mb-8 font-light">
+                    Je danse depuis l'âge de 13 ans comme freestyler au sein de The Justice Fam, de la communauté Krump Mada.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Media Card: image5.png (Clean view) -->
+                    <div class="media-card cursor-pointer overflow-hidden rounded-md bg-cardBg border border-neutral-800" onclick="openMediaModal('image', 'image5.png')">
+                        <img src="image5.png" alt="" class="w-full aspect-[3/4] object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x800/0f0f0f/333333?text=Media';">
+                    </div>
+
+                    <!-- Media Card: video2.mp4 (Minimal play indicator) -->
+                    <div class="relative media-card cursor-pointer overflow-hidden rounded-md bg-cardBg border border-neutral-800 aspect-[3/4] flex items-center justify-center group" onclick="openMediaModal('video', 'https://res.cloudinary.com/tnxlmqqv/video/upload/v1789410618/FDown.vn_Facebook_Video_Downloader_720p_HD__c63e_iby3k0.mp4')">
+                        <video src="https://res.cloudinary.com/tnxlmqqv/video/upload/v1789410618/FDown.vn_Facebook_Video_Downloader_720p_HD__c63e_iby3k0.mp4" class="w-full h-full object-cover" muted loop playsinline></video>
+                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                            <div class="w-12 h-12 rounded-full bg-accentRed/90 text-white flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-play ml-1 text-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="realisation" class="max-w-5xl mx-auto px-6 pt-24">
+            <div class="border-t border-neutral-900 pt-16">
+                <h2 class="font-artistic text-2xl sm:text-3xl text-white mb-4">Réalisation</h2>
+                <p class="text-gray-300 text-base leading-relaxed max-w-3xl mb-8 font-light">
+                    Danseur krumper spécialisé en character, acteur spécialisé en imitation : c'est cette capacité d'écriture de personnages qui m'a amené à être lauréat du concours de réalisation de courts-métrages lors du Grand Forum de la Psychologie 2026.
+                </p>
+
+                <!-- Media Card: image2.png (Clean view) -->
+                <div class="media-card cursor-pointer overflow-hidden rounded-md bg-cardBg border border-neutral-800" onclick="openMediaModal('image', 'image2.png')">
+                    <img src="image2.png" alt="" class="w-full aspect-video object-cover" onerror="this.onerror=null; this.src='https://placehold.co/1200x675/0f0f0f/333333?text=Media';">
+                </div>
+            </div>
+        </section>
+
+        <section id="marketing" class="max-w-5xl mx-auto px-6 pt-24 pb-12">
+            <div class="border-t border-neutral-900 pt-16">
+                <h2 class="font-artistic text-2xl sm:text-3xl text-white mb-4">Responsable Marketing & Communication</h2>
+                <p class="text-gray-300 text-base leading-relaxed max-w-3xl mb-8 font-light">
+                    Lors de la 10ème édition du Beef Empire Session, Battle of Krump, nous avons eu comme invité jury Show Off aka Twin Street Bully, qui fait partie du groupe du fondateur du Krump.
+                </p>
+
+                <!-- Media Card: image3.png (Clean view) -->
+                <div class="media-card cursor-pointer overflow-hidden rounded-md bg-cardBg border border-neutral-800" onclick="openMediaModal('image', 'image3.png')">
+                    <img src="image3.png" alt="" class="w-full h-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/1200x675/0f0f0f/333333?text=Media';">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="mediaModal" class="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
+        <div class="relative w-full max-w-5xl max-h-[90vh] flex flex-col items-center justify-center">
+            
+            <!-- Close Modal Button -->
+            <button onclick="closeMediaModal()" class="absolute -top-12 right-0 text-white/70 hover:text-white text-2xl p-2 transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Media Container Block (Clean display) -->
+            <div class="w-full flex items-center justify-center overflow-hidden rounded-md">
+                <img id="modalImage" src="" alt="" class="max-h-[85vh] w-auto max-w-full object-contain hidden">
+                <video id="modalVideo" controls class="max-h-[85vh] w-full max-w-full hidden">
+                    <source id="modalVideoSource" src="" type="video/mp4">
+                    Votre navigateur ne prend pas en charge cette vidéo.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-black border-t border-neutral-900 py-10 text-center text-xs text-neutral-500">
+        <div class="max-w-5xl mx-auto px-6">
+            <p class="font-artistic text-sm text-gray-300">NJAKA MARCO RAJAONSON</p>
+            <p class="mt-1 text-neutral-500">Def aka Lil Baby Lim'z</p>
+        </div>
+    </footer>
+
+    <script>
+        function openMediaModal(type, src) {
+            const modal = document.getElementById('mediaModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalVid = document.getElementById('modalVideo');
+            const modalVidSource = document.getElementById('modalVideoSource');
+
+            if (type === 'image') {
+                modalVid.classList.add('hidden');
+                modalVid.pause();
+                modalImg.src = src;
+                modalImg.onerror = function() {
+                    this.src = `https://placehold.co/1000x700/0f0f0f/333333?text=Apercu`;
+                };
+                modalImg.classList.remove('hidden');
+            } else if (type === 'video') {
+                modalImg.classList.add('hidden');
+                modalVidSource.src = src;
+                modalVid.load();
+                modalVid.classList.remove('hidden');
+            }
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMediaModal() {
+            const modal = document.getElementById('mediaModal');
+            const modalVid = document.getElementById('modalVideo');
+
+            modal.classList.add('opacity-0');
+            modalVid.pause();
+
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // Close modal on Escape key press or backdrop click
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeMediaModal();
+        });
+
+        document.getElementById('mediaModal').addEventListener('click', (e) => {
+            if (e.target.id === 'mediaModal') closeMediaModal();
+        });
+    </script>
+</body>
+</html>
